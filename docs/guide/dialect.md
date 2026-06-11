@@ -4,7 +4,7 @@ Yog is a **typed subset of TypeScript**. The syntax is standard TypeScript — T
 
 Think of it the way AssemblyScript relates to TypeScript: the notation is familiar, but execution maps directly to machine instructions.
 
-> **IDE support:** Since Yog uses TypeScript syntax, you get full IntelliSense and type checking in VS Code by pointing your `tsconfig.json` at `yog-core/yog.d.ts`. See [Editor Setup](/guide/editor) for details.
+> **IDE support:** Since Yog uses TypeScript syntax, you get full IntelliSense and type checking in VS Code by pointing your `tsconfig.json` at `yog-core/yog.d.ts`. See [Editor Setup](/guide/editor-setup) for details.
 
 ## Types
 
