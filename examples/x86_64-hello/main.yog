@@ -1,0 +1,20 @@
+/**
+ * x86_64 Hello World
+ *
+ * Runs natively on Linux x86_64.
+ * On macOS or other platforms, run via: qemu-x86_64 app.elf
+ *
+ * Compile:
+ *   yogc --target x86_64 examples/x86_64-hello/main.yog app.elf
+ *
+ * Run on Linux:
+ *   chmod +x app.elf && ./app.elf
+ *
+ * Run on macOS (Apple Silicon or Intel):
+ *   qemu-x86_64 app.elf
+ */
+
+function main(): void {
+    uart_init();
+    uart_print("Hello from Yog on x86_64!\n");
+}

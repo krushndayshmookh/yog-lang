@@ -1,0 +1,37 @@
+{
+  "name": "vscode-yog",
+  "displayName": "Yog Language Support",
+  "description": "Syntax highlighting and language support for .yog files",
+  "version": "0.1.0",
+  "publisher": "yog-lang",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yog-lang/jsos"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "yog",
+        "aliases": ["Yog"],
+        "extensions": [".yog"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "yog",
+        "scopeName": "source.yog",
+        "path": "./syntaxes/yog.tmLanguage.json",
+        "embeddedLanguages": {
+          "meta.embedded.block.typescript": "typescript"
+        }
+      }
+    ]
+  }
+}

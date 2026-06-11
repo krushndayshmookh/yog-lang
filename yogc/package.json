@@ -1,0 +1,19 @@
+{
+  "name": "yogc",
+  "version": "0.1.0",
+  "description": "yogc — the Yog compiler. Compiles .yog source files to native ARM64 binaries.",
+  "main": "src/index.js",
+  "bin": {
+    "yogc": "src/index.js"
+  },
+  "scripts": {
+    "build": "node src/index.js ../kernel/kernel.yog ../kernel8.img",
+    "test": "node test/run.js"
+  },
+  "dependencies": {
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

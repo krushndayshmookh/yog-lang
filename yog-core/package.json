@@ -1,0 +1,7 @@
+{
+  "name": "yog-core",
+  "version": "0.1.0",
+  "description": "Yog bare-metal standard library — no OS, no syscalls required. Provides primitives usable in any Yog program without an OS: memory operations, string utilities, math helpers.",
+  "main": "src/index.yog",
+  "dependencies": {}
+}

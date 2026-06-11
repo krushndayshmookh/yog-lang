@@ -1,0 +1,18 @@
+/**
+ * kernel.yog — Yog Phase 1 Kernel
+ *
+ * First program compiled by yogc.
+ * Initialises the UART and prints "Hello, World!" to the serial console.
+ *
+ * Compile:  yogc kernel/kernel.yog kernel8.img
+ * Target:   arm64 (default)
+ * Run:      qemu-system-aarch64 -M raspi3b -kernel kernel8.img -serial stdio -display none
+ *
+ * Expected output:
+ *   Hello, World!
+ */
+
+function main(): void {
+    uart_init();
+    uart_print("Hello, World!\n");
+}

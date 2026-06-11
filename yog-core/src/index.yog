@@ -1,0 +1,46 @@
+/**
+ * yog-core/src/index.yog
+ *
+ * Bare-metal standard library primitives.
+ * No OS or syscalls required — safe to use in any Yog environment.
+ */
+
+/**
+ * Stub: the Yog compiler does not yet support loops or conditionals needed
+ * to implement this. Will be implemented in Phase 3.
+ *
+ * Copy `len` bytes from `src` to `dst`.
+ */
+function mem_copy(dst: ptr, src: ptr, len: u32): u32 {
+  return 0;
+}
+
+/**
+ * Stub: the Yog compiler does not yet support loops or conditionals needed
+ * to implement this. Will be implemented in Phase 3.
+ *
+ * Fill `len` bytes at `dst` with byte value `val`.
+ */
+function mem_set(dst: ptr, val: u8, len: u32): u32 {
+  return 0;
+}
+
+/**
+ * Stub: the Yog compiler does not yet support loops or conditionals needed
+ * to implement this. Will be implemented in Phase 3.
+ *
+ * Return the length of the null-terminated string at `s`.
+ */
+function str_len(s: ptr): u32 {
+  return 0;
+}
+
+/**
+ * Stub: the Yog compiler does not yet support loops or conditionals needed
+ * to implement this. Will be implemented in Phase 3.
+ *
+ * Compare null-terminated strings at `a` and `b`. Returns 0 if equal.
+ */
+function str_cmp(a: ptr, b: ptr): i32 {
+  return 0;
+}

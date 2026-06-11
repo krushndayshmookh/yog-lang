@@ -1,0 +1,43 @@
+/**
+ * yog-std/src/io.yog
+ *
+ * I/O primitives for the Yog standard library.
+ * Requires a running Yog OS kernel that exposes syscalls.
+ *
+ * Syscall convention used here:
+ *   syscall(id, fd, buf_ptr, len_u32)
+ *     id=0 → write
+ *     id=1 → read
+ */
+
+import { str_len } from "yog-core";
+
+/**
+ * Stub: the Yog compiler does not yet support the syscall infrastructure or
+ * the str_len loop needed to implement this fully. Will be implemented in Phase 3.
+ *
+ * Write null-terminated string at `s` to stdout (fd 1).
+ */
+function print(s: ptr): u32 {
+  return syscall(0, 1, s, str_len(s));
+}
+
+/**
+ * Stub: the Yog compiler does not yet support the string manipulation or
+ * newline-append logic needed to implement this. Will be implemented in Phase 3.
+ *
+ * Write null-terminated string at `s` to stdout followed by a newline.
+ */
+function println(s: ptr): u32 {
+  return 0;
+}
+
+/**
+ * Stub: the Yog compiler does not yet support the syscall infrastructure needed
+ * to implement this fully. Will be implemented in Phase 3.
+ *
+ * Read up to `maxLen` bytes from stdin (fd 0) into buffer at `buf`.
+ */
+function read_line(buf: ptr, maxLen: u32): u32 {
+  return syscall(1, 0, buf, maxLen);
+}

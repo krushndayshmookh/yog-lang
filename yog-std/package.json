@@ -1,0 +1,7 @@
+{
+  "name": "yog-std",
+  "version": "0.1.0",
+  "description": "Yog standard library — requires a Yog OS kernel (syscalls). This package depends on a running Yog kernel providing syscalls and cannot be used in bare-metal environments without one.",
+  "main": "src/io.yog",
+  "dependencies": {}
+}

@@ -1,0 +1,21 @@
+{
+  "name": "yog",
+  "version": "0.1.0",
+  "description": "Yog — JS syntax meets bare metal. A systems compiler for JS developers.",
+  "private": true,
+  "workspaces": [
+    "yogc",
+    "yog-core",
+    "yog-std",
+    "docs"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=yogc",
+    "docs:dev": "npm run dev --workspace=docs",
+    "docs:build": "npm run build --workspace=docs",
+    "run": "bash run.sh"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

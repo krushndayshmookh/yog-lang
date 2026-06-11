@@ -1,0 +1,30 @@
+/**
+ * ESP32 Hello World
+ *
+ * Runs on ESP32 (Xtensa LX6, 240 MHz).
+ * Entry point: setup() + loop() — the Arduino-style programming model.
+ *   setup() runs once at boot.
+ *   loop()  is called repeatedly forever by the bootstrap.
+ *
+ * Compile:
+ *   yogc --target xtensa-esp32 examples/esp32-hello/main.yog app.bin
+ *
+ * Flash to ESP32 via OpenOCD (loads into IRAM at 0x40080000):
+ *   openocd -f board/esp32-wrover-kit-3.3v.cfg \
+ *     -c "program app.bin 0x40080000 verify reset exit"
+ *
+ * See docs/guide/targets/esp32.md for full setup instructions.
+ */
+
+function setup(): void {
+    // uart_init() is a no-op on ESP32:
+    // the ROM bootloader already initialised UART0 at 115200 baud.
+    uart_init();
+    uart_print("Hello from Yog on ESP32!\n");
+}
+
+function loop(): void {
+    // Called repeatedly after setup() returns.
+    // In a real program: poll sensors, update state, drive outputs, etc.
+    // For this example, loop is empty — the board just idles.
+}

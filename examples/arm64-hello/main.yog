@@ -1,0 +1,21 @@
+/**
+ * ARM64 Hello World
+ *
+ * Runs on Raspberry Pi 3 or QEMU raspi3b.
+ * Entry point: main() — called by the bootstrap after setting up the stack.
+ *
+ * Compile:
+ *   yogc examples/arm64-hello/main.yog kernel8.img
+ *
+ * Run in QEMU:
+ *   qemu-system-aarch64 -M raspi3b -kernel kernel8.img -serial stdio -display none
+ *
+ * Flash to Raspberry Pi 3:
+ *   Copy kernel8.img to the root of a FAT32 SD card alongside
+ *   config.txt, bootcode.bin, start.elf (from Raspberry Pi firmware).
+ */
+
+function main(): void {
+    uart_init();
+    uart_print("Hello from Yog on ARM64!\n");
+}
