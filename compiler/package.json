@@ -1,0 +1,13 @@
+{
+  "name": "jsos-compiler",
+  "version": "0.1.0",
+  "description": "JS-to-ARM64 bare-metal compiler for JSOS",
+  "main": "js2bin.js",
+  "scripts": {
+    "build": "node js2bin.js ../kernel/kernel.js ../kernel8.img",
+    "run":   "npm run build && qemu-system-aarch64 -M raspi3b -kernel ../kernel8.img -serial stdio -display none"
+  },
+  "dependencies": {
+    "acorn": "^8.11.3"
+  }
+}
