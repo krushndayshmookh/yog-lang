@@ -67,8 +67,6 @@ export default defineConfig({
           ],
         },
       ],
-    },
-
       '/vision/': [
         {
           text: 'Vision',
