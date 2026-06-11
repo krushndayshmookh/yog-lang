@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Yog',
   description: 'JS syntax meets bare metal — a systems compiler for JS developers.',
+  base: '/yog-lang/',
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
